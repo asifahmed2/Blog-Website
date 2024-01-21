@@ -1,0 +1,26 @@
+
+  <%- include("header.ejs") %>
+  <h1>HOME</h1>
+  <p>Explore the latest insights on Asif Blog's. Engage with our community and be inspired!</p>
+
+  <% if (locals.savedData && locals.savedData.length >0 ) {  %>
+    <ul>
+  <% locals.savedData.forEach(post =>{ %>
+    <li>
+      <h2><%= post.titleInput %></h2>
+      <p><%= post.myPost.slice(0,100) %></p>
+      <a href="/post/<%= post.id %>">Read More</a>
+
+    </li>
+
+ <% }) %>
+
+    </ul>
+    
+  <% }else { %>
+
+    <p>No post</p>
+
+  <% }  %>
+
+  <%- include("footer.ejs") %>

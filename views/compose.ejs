@@ -1,0 +1,11 @@
+<%- include("header.ejs") %>
+  <form action="/compose" method="post">
+
+  <label for="title">Title:</label>
+  <input type="text" name="titleInput" required>
+
+  <label for="Post">Post </label>
+  <input type="text" name="myPost" required>
+
+  <button type="submit">Publish</button>
+  <%- include("footer.ejs") %>
